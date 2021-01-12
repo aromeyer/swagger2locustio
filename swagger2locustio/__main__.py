@@ -19,6 +19,7 @@ def main():
 
     args = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     args.add_argument("-f", "--swagger-file", help="path to swagger file", required=True, type=Path)
+    args.add_argument("-n", "--app-name", help="application name", required=False, type=str)
     args.add_argument(
         "-r",
         "--results-path",
@@ -63,6 +64,7 @@ def main():
     log = logging.getLogger(__name__)
     log.debug("Command line args: %s", args)
     swagger_file = args.swagger_file
+    app_name = args.app_name
     ext = swagger_file.suffix
     paths = [path.lower() for path in args.paths_white]
     not_paths = [path.lower() for path in args.paths_black]

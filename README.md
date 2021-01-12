@@ -64,6 +64,9 @@ optional arguments:
   -h, --help            show this help message and exit
   -f SWAGGER_FILE, --swagger-file SWAGGER_FILE
                         path to swagger file (default: None)
+                        -f SWAGGER_FILE, --swagger-file SWAGGER_FILE
+  -n APP_NAME, --app-name APP_NAME
+                        the application name (default: None)
   -r RESULTS_PATH, --results-path RESULTS_PATH
                         path to store locustfile.py (default: generated)
   -v, --verbose         verbose (default: False)
