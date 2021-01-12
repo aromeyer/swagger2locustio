@@ -93,7 +93,7 @@ def main():
             swagger_data = yaml.safe_load(file)
     else:
         raise ValueError("Incorrect file format")
-    swagger_strategy = BaseStrategy(swagger_data, args.results_path, mask)
+    swagger_strategy = BaseStrategy(swagger_data, args.results_path, mask, app_name)
     try:
         swagger_strategy.process()
     except ValueError as error:
