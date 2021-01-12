@@ -1,4 +1,5 @@
 """Module: SwaggerV3 parser"""
+from copy import deepcopy
 
 from swagger2locustio.parsers.base_parser import SwaggerBaseParser
 
